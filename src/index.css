@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+/* En tu archivo CSS global */
+@keyframes ultraSlowReveal {
+  0% {
+    opacity: 0;
+    letter-spacing: 2em;
+    filter: blur(12px);
+    transform: scale(1.2);
+  }
+  30% {
+    opacity: 0.2;
+    letter-spacing: 1.5em;
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 0.5;
+    letter-spacing: 0.5em;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes slowFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotateX(90deg);
+  }
+  70% {
+    opacity: 0.3;
+    transform: translateY(20px) rotateX(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.animate-ultra-slow-reveal {
+  animation: ultraSlowReveal 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slow-fade-in {
+  animation: slowFadeIn 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@font-face {
+  font-family: "Acumin Variable Concept";
+  src: url("/fonts/AcuminVariableConcept.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Opcional: Si tienes diferentes variantes (bold, italic, etc.) */
+@font-face {
+  font-family: "Acumin Variable Concept";
+  src: url("/fonts/AcuminVariableConcept-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Acumin Variable Concept", sans-serif;
+}
+
+@keyframes crumple-movement {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 600px 600px;
+  }
+}
+
+@keyframes shadow-drift {
+  0% {
+    transform: translate(-3%, -2%) rotate(-1deg);
+  }
+  50% {
+    transform: translate(2%, 3%) rotate(0.8deg);
+  }
+  100% {
+    transform: translate(-3%, -2%) rotate(-1deg);
+  }
+}
+
+@keyframes light-drift {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-crumple-movement {
+  animation: crumple-movement 70s linear infinite;
+}
+
+.animate-shadow-drift {
+  animation: shadow-drift 12s ease-in-out infinite alternate;
+}
+
+.animate-light-drift {
+  animation: light-drift 20s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-ultra-slow-reveal {
+    animation-duration: 3s;
+  }
+
+  .animate-slow-fade-in {
+    animation-duration: 2s;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-transparent {
+    opacity: 0.95;
+  }
+}
+
+.transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.05); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Animación de salida */
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
+}
+
+.fade-out {
+    animation: fadeOut 1.5s ease-in forwards;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.group:hover .group-hover\:animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes holographic-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-holographic-flow {
+  animation: holographic-flow 20s linear infinite;
+}
+
+@keyframes grid-pan {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+.animate-grid-pan {
+  animation: grid-pan 120s linear infinite;
+}
+
+@keyframes particle-drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(50px, 50px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-particle-drift {
+  animation: particle-drift 60s ease-in-out infinite;
+}
+
+/* En tu archivo CSS global */
+@keyframes slowFadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slow-fade-in {
+  animation: slowFadeIn 1s ease-out forwards;
+}
+
+@keyframes ultraSlowReveal {
+  0% { opacity: 0; letter-spacing: 1.5em; }
+  100% { opacity: 1; letter-spacing: normal; }
+}
+
+.animate-ultra-slow-reveal {
+  animation: ultraSlowReveal 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes ultraSlowReveal {
+  0% { opacity: 0; letter-spacing: 2em; filter: blur(12px); transform: scale(1.2); }
+  30% { opacity: 0.2; letter-spacing: 1.5em; filter: blur(8px); }
+  60% { opacity: 0.5; letter-spacing: 0.5em; filter: blur(4px); }
+  100% { opacity: 1; letter-spacing: normal; filter: blur(0); transform: scale(1); }
+}
+
+@keyframes slowFadeIn {
+  0% { opacity: 0; transform: translateY(40px) rotateX(90deg); }
+  70% { opacity: 0.3; transform: translateY(20px) rotateX(30deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+
+.animate-ultra-slow-reveal {
+  animation: ultraSlowReveal 6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
