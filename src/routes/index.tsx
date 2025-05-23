@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { MainLayout } from '../components/layout';
 import { Home } from '../modules/home';
-import { AboutUs } from '../modules/about-us';
 import { Services } from '../modules/services';
 import { Contact } from '../modules/contact';
 
@@ -11,14 +10,6 @@ const router = createBrowserRouter([
     element: (
       <MainLayout>
         <Home />
-      </MainLayout>
-    ),
-  },
-  {
-    path: '/nosotros',
-    element: (
-      <MainLayout>
-        <AboutUs />
       </MainLayout>
     ),
   },

@@ -18,10 +18,8 @@ const Navbar = () => {
 
     const links = [
         { to: '/', label: 'Inicio' },
-        { to: '/about-us', label: 'Sobre Nosotros' },
-        { to: '/our-services', label: 'Nuestros Servicios' },
-        { to: '/packages', label: 'Paquetes' },
-        { to: '/contact', label: 'Contacto' }
+        { to: '/servicios', label: 'Servicios' },
+        { to: '/contacto', label: 'Contacto' }
     ];
 
     return (
